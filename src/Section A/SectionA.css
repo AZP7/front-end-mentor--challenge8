@@ -1,0 +1,167 @@
+.Section{
+    width: 90%;
+    height: 70%;
+    position: relative;
+}
+.game_section{
+    width: 100%;
+    height: 50%;
+    background-image: url('../assets/images/bg-triangle.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.scissorPaper{
+    width: 100%;
+    transform: translateY(-30px);
+}
+.scissorPaper>div, .rock {
+    width: clamp(80px, 15vw, 150px);
+    height: clamp(80px, 15vw, 150px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+}
+.scissorPaper>div:hover, .rock:hover {
+    transform: scale(1.1);
+}
+.scissorPaper>div>img , .rock>img, .game_result>div>img{
+    background-color: #fff;
+    padding: clamp(8px, 2vw, 20px);
+    border-radius: 50%;
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+.scissorPaper >div:first-child{
+    background-color: rgb(55, 55, 238);
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.scissorPaper>div:last-child{
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.rock{
+    border-radius: 50%;
+    background-color: rgb(236, 30, 64);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.Rules{
+    border-radius: 10px;
+    padding: 3% 10%;
+}
+.Rules >span{
+    cursor: pointer;
+    color: #fff;
+}
+.btn{
+    color: #fff;
+}
+.rules{
+    width: 100vw;
+    background-color: #fff;
+    height: 100vh !important;
+    position: absolute;
+    bottom: -100%;
+}
+.rules>h1{
+    font-family: Arial;
+    font-weight: 500;
+}
+.showRules{
+    animation: Upto 1.2s forwards;
+}
+@keyframes Upto{
+    0%{
+        bottom: -100%;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+.closeBtn{
+    background-color: transparent;
+    color: #747373;
+    font-size: 3rem;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 10px 30px;
+}
+.closeBtn:hover{
+    border: 1px solid grey;
+}
+.game_session{
+    width: 100%;
+}
+.game_session .game_result{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+}
+.game_result >div{
+    border-radius: 50%;
+    background-color: red;
+    width: clamp(80px, 15vw, 150px);
+    height: clamp(80px, 15vw, 150px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.game_result span{
+    font-weight: 600;
+    font-size: clamp(0.8rem, 2vw, 1.1rem);
+}
+.play_again>span{
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    font-weight: 650;
+}
+.play_again>button{
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    padding: clamp(8px, 2vw, 20px) clamp(15px, 3vw, 30px);
+    font-weight: 600;
+    font-size: clamp(1rem, 3vw, 2rem);
+}
+@media(min-width: 300px){
+    .scissorPaper>div, .rock{
+        width: clamp(80px, 15vw, 150px);
+        height: clamp(80px, 15vw, 150px);
+    }
+    .game_result >div{
+        width: clamp(80px, 15vw, 150px);
+        height: clamp(80px, 15vw, 150px);
+    }
+    .game_result>span{
+        font-size: clamp(0.8rem, 2vw, 1.1rem);
+    }
+}
+@media(min-width: 768px){
+    .scissorPaper>div, .rock{
+        width: clamp(100px, 12vw, 180px);
+        height: clamp(100px, 12vw, 180px);
+    }
+    .game_result >div{
+        width: clamp(100px, 12vw, 180px);
+        height: clamp(100px, 12vw, 180px);
+    }
+}
+@media(min-width: 1024px){
+    .scissorPaper>div, .rock{
+        width: clamp(120px, 10vw, 200px);
+        height: clamp(120px, 10vw, 200px);
+    }
+    .game_result >div{
+        width: clamp(120px, 10vw, 200px);
+        height: clamp(120px, 10vw, 200px);
+    }
+}

@@ -1,0 +1,57 @@
+.header{
+    width: 85vw;
+    border-radius: 10px;
+    border-color: grey !important;
+}
+.LogoImage{
+    width: 40%;
+    object-fit: contain;
+    max-height: 85%;
+}
+.score > span:first-child{
+    font-size: 1rem;
+    color: darkblue;
+}
+.score>span:last-child{
+    font-size: 1.7rem;   
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.score{
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: #fff;
+    max-height: 85%;
+}
+/* Extra small devices (portrait phones, less than 576px) */
+/* No media query needed since this is the default */
+
+/* Small devices (≥576px) */
+@media (min-width: 576px) {
+    /* Your CSS here */
+    .header{
+        width: 75vw;
+    }
+
+  }
+  
+  /* Medium devices (≥768px) */
+  @media (min-width: 768px) {
+    /* Your CSS here */
+  }
+  
+  /* Large devices (≥992px) */
+  @media (min-width: 992px) {
+    /* Your CSS here */
+  }
+  
+  /* Extra large devices (≥1200px) */
+  @media (min-width: 1200px) {
+    /* Your CSS here */
+  }
+  
+  /* Extra extra large devices (≥1400px) */
+  @media (min-width: 1400px) {
+    /* Your CSS here */
+  }
+  
